@@ -1,17 +1,32 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <title>Passcode Protected Image Safe</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <h1>Passcode Protected Image Safe</h1>
-    <a href="https://en.wikipedia.org/wiki/Safe">Learn more about safes on Wikipedia</a>
-    <div>
-      <h2>Purpose of the Project</h2>
-      <p>This Web app lets you lock and unlock an image using a passcode. Enter an image URL and use the keypad to secure it!</p>
-      <h4>Enter Img Link</h4>
+  <body class="bg-light">
+
+    <div class="container mt-5">
+      <h1 class="display-5 text-center mb-4">Passcode Protected Image Safe</h1>
+
+      <div class="text-center mb-4">
+        <a class="btn btn-outline-primary" href="https://en.wikipedia.org/wiki/Safe" target="_blank">
+          Learn more about safes on Wikipedia
+        </a>
+      </div>
+
+      <div class="card p-4 shadow-sm">
+        <h2 class="h5 mb-3">🔎 Purpose of the Project</h2>
+        <p>This web app lets you lock and unlock an image using a passcode. Enter an image URL and use the keypad to secure it!</p>
+
+        <div class="mb-3">
+          <label for="imgInput" class="form-label"><strong>Enter Image URL</strong></label>
+          <input id="imgInput" class="form-control" type="text" placeholder="e.g. https://example.com/image.jpg">
+        </div>
+      </div>
     </div>
-      <input id="imgInput" class="form-control" type="text" placeholder="Enter image link">
+
   </body>
 </html>
