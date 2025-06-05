@@ -1,1 +1,5 @@
-div{
+  .card.p-4.shadow-sm:hover {
+    background-color: #0275d8;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
