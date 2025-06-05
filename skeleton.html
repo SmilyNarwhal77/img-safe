@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Passcode Protected Image Safe</title>
+  </head>
+  <body class="bg-light">
 
+    <div class="container mt-5">
+      <h1 class="display-5 text-center mb-4">Passcode Protected Image Safe</h1>
+
+      <div class="text-center mb-4">
+        <a class="btn btn-outline-primary" href="https://en.wikipedia.org/wiki/Safe" target="_blank">
+          Learn more about safes on Wikipedia
+        </a>
+      </div>
+
+      <div class="card p-4 shadow-sm">
+        <h2 class="h5 mb-3">Purpose of the Project</h2>
+        <p>This web app lets you lock and unlock an image using a passcode. Enter an image URL and use the keypad to secure it!</p>
+      </div>
+
+      <br>
+
+      <div class="card p-4 shadow-sm">
+        <label for="imgInput" class="form-label"><strong>Enter Image URL</strong></label>
+        <input id="imgInput" class="form-control" type="text" placeholder="e.g. https://example.com/image.jpg">
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <h4 class="mb-3">Enter Passcode</h4>
+
+      <div class="row g-2">
+        <div class="col-4">
+          <button id="b1" class="btn btn-secondary w-100">1</button>
+        </div>
+        <div class="col-4">
+          <button id="b2" class="btn btn-secondary w-100">2</button>
+        </div>
+        <div class="col-4">
+          <button id="b3" class="btn btn-secondary w-100">3</button>
+        </div>
+
+        <div class="col-4">
+          <button id="b4" class="btn btn-secondary w-100">4</button>
+        </div>
+        <div class="col-4">
+          <button id="b5" class="btn btn-secondary w-100">5</button>
+        </div>
+        <div class="col-4">
+          <button id="b6" class="btn btn-secondary w-100">6</button>
+        </div>
+
+        <div class="col-4">
+          <button id="b7" class="btn btn-secondary w-100">7</button>
+        </div>
+        <div class="col-4">
+          <button id="b8" class="btn btn-secondary w-100">8</button>
+        </div>
+        <div class="col-4">
+          <button id="b9" class="btn btn-secondary w-100">9</button>
+        </div>
+
+        <div class="col-4">
+          <button id="clear" class="btn btn-danger w-100">Clear</button>
+        </div>
+        <div class="col-4">
+          <button id="b0" class="btn btn-secondary w-100">0</button>
+        </div>
+        <div class="col-4">
+          <button id="unlock" class="btn btn-success w-100">Unlock</button>
+        </div>
+
+        <div class="col-12 mt-2">
+          <button id="lock" class="btn btn-warning w-100">Lock</button>
+        </div>
+      </div>
+      <div id="imageContainer" class="text-center">
+          <img id="img" src="" alt="Locked Image" class="img-fluid rounded shadow d-none" style="max-height: 300px;">
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
