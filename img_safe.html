@@ -21,11 +21,57 @@
         <h2 class="h5 mb-3">Purpose of the Project</h2>
         <p>This web app lets you lock and unlock an image using a passcode. Enter an image URL and use the keypad to secure it!</p>
       </div>
-        <div class="mb-3">
+      <br>
+        <div class="card p-4 shadow-sm">
           <label for="imgInput" class="form-label"><strong>Enter Image URL</strong></label>
           <input id="imgInput" class="form-control" type="text" placeholder="e.g. https://example.com/image.jpg">
         </div>
     </div>
+    <div class="container mt-4">
+  <h4 class="mb-3">Enter Passcode</h4>
+  <input type="text" id="passcode" class="form-control text-center mb-3" placeholder="Passcode" readonly>
+  <div class="row g-2">
+    <div class="col-4">
+      <button class="btn btn-secondary w-100">1</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-secondary w-100">2</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-secondary w-100">3</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-secondary w-100">4</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-secondary w-100">5</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-secondary w-100">6</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-secondary w-100">7</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-secondary w-100">8</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-secondary w-100">9</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-danger w-100">Clear</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-secondary w-100">0</button>
+    </div>
+    <div class="col-4">
+      <button class="btn btn-success w-100">Unlock</button>
+    </div>
+    <div class="col-12 mt-2">
+      <button class="btn btn-warning w-100">Lock</button>
+    </div>
+  </div>
+</div>
 
   </body>
 </html>
