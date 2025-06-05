@@ -1,99 +1,61 @@
-//=====INIT=======
 let personalsequence = "";
 let attemptsequence = "";
-let state = 0;
-const unlockbutton = document.getElementById("unlock");
-const lockbutton = document.getElementById("lock");
-const clearbutton = document.getElementById("clear");
-const imginput = document.getElementById("imgInput");
-const imgdisplay = document.getElementById("img");//check
-function changestate() {
-    state = 1;
+let state = 0; // 0 = locked mode, 1 = setting passcode
+
+const unlockButton = document.getElementById("unlock");
+const lockButton = document.getElementById("lock");
+const clearButton = document.getElementById("clear");
+const imgInput = document.getElementById("imgInput");
+const imgDisplay = document.getElementById("img");
+
+lockButton.onclick = function () {
+  if (!imgInput.value) {
+    alert("⚠Please enter an image URL before locking!");
+    return;
+  }
+
+  imgDisplay.src = imgInput.value;
+  personalsequence = "";
+  attemptsequence = "";
+  state = 1; // now setting password
+  alert("Lock mode actived. Set your passcode using the keypad.");
+};
+
+unlockButton.onclick = function () {
+  if (personalsequence === "" || attemptsequence === "") {
+    alert("No passcode set or no attempt made.");
+    return;
+  }
+
+  if (personalsequence === attemptsequence) {
+    alert("Image unlocked!");
+    attemptsequence = "";
+  } else {
+    alert("Wrong passcode. Try again.");
+    attemptsequence = "";
+  }
+};
+
+clearButton.onclick = function () {
+  if (state === 1) {
+    personalsequence = "";
+    alert("Passcode cleared.");
+  } else {
+    attemptsequence = "";
+    alert("Attempt reset.");
+  }
+};
+
+function pressDigit(digit) {
+  if (state === 1) {
+    personalsequence += digit;
+  } else {
+    attemptsequence += digit;
+  }
 }
-function lock() {
-  if(state == 1) {
-    state = 0;
-  } else if(!imginput.value) {
-    //check
-    
-function completepword() {
-  
-function check() {
-    if(personalsequence === attemptsequence && personalsequence.length != 0) {
-      unlock();
-    } else if(personalsequence.length === attemptsequence.length) {
-      failed();
-    } else {
-      return;
-    }
-}
-function b0() {
-    if(state == 1) {
-      personalsequence += "0";
-    } else {
-      attemptsequence += "0";
-      check(); 
-}
-function b1() {
-    if(state == 1) {
-      personalsequence += "1";
-    } else {
-      attemptsequence += "1";
-      check(); 
-}
-function b2() {
-    if(state == 1) {
-      personalsequence += "2";
-    } else {
-      attemptsequence += "2";
-      check(); 
-}
-function b3() {
-    if(state == 1) {
-      personalsequence += "3";
-    } else {
-      attemptsequence += "3";
-      check(); 
-}
-function b4() {
-    if(state == 1) {
-      personalsequence += "4";
-    } else {
-      attemptsequence += "4";
-      check(); 
-}
-function b5() {
-    if(state == 1) {
-      personalsequence += "5";
-    } else {
-      attemptsequence += "5";
-      check(); 
-}
-function b6() {
-    if(state == 1) {
-      personalsequence += "6";
-    } else {
-      attemptsequence += "6";
-      check(); 
-}
-function b7() {
-    if(state == 1) {
-      personalsequence += "7";
-    } else {
-      attemptsequence += "7";
-      check(); 
-}
-function b8() {
-    if(state == 1) {
-      personalsequence += "8";
-    } else {
-      attemptsequence += "8";
-      check(); 
-}
-function b9() {
-    if(state == 1) {
-      personalsequence += "9";
-    } else {
-      attemptsequence += "9";
-      check(); 
+
+for (let i = 0; i <= 9; i++) {
+  document.getElementById("b" + i).onclick = function () {
+    pressDigit(i.toString());
+  };
 }
