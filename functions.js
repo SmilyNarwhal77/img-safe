@@ -8,7 +8,7 @@ const clearButton = document.getElementById("clear");
 const imgInput = document.getElementById("imgInput");
 const imgDisplay = document.getElementById("img");
 
-lockButton.onclick = function () {
+lockButton.onclick = () => {
   if (!imgInput.value) {
     alert("⚠Please enter an image URL before locking!");
     return;
@@ -21,7 +21,7 @@ lockButton.onclick = function () {
   alert("Lock mode actived. Set your passcode using the keypad.");
 };
 
-unlockButton.onclick = function () {
+unlockButton.onclick = () => {
   if (personalsequence === "" || attemptsequence === "") {
     alert("No passcode set or no attempt made.");
     return;
@@ -36,7 +36,7 @@ unlockButton.onclick = function () {
   }
 };
 
-clearButton.onclick = function () {
+clearButton.onclick = () => {
   if (state === 1) {
     personalsequence = "";
     alert("Passcode cleared.");
